@@ -22,7 +22,7 @@ function MalesStore() {
   console.log(items);
   return (
   
-<section className="text-gray-700 body-font">
+<section className="text-white body-font bg-black">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap -m-4">
           {items.map(item => (

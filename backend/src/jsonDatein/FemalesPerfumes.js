@@ -144,7 +144,7 @@ const female = [
       "full" : 170
     },
     "target" : "female",
-    "image": "https://media.douglas.de/medias/ntDPdU448648-0-global.jpg?context=bWFzdGVyfGltYWdlc3wxMDg3NTR8aW1hZ2UvanBlZ3xoNjMvaGYwLzE0Mjc4MzQ1MDMxNzEwL2middelRFBkVTQ0ODY0OF8wX2dsb2JhbC5qcGd8ZGIwN2M5YWJiOGU1YmI3MTViZTBmYmY4YTE3MzY2OGQ1ZDJhYWMyMTdmZGIxZTI0ODBhMTAyNDk1MDYwYzVmMA&grid=true&imwidth=5middel"
+    "image": "https://beauty-content.douglas.de/5e56662d8e9e7500269afadf/0ljsNP-HB_ALV_EDP_20_3D_Bottle_White.gif"
   },
   {
     "id": 37,

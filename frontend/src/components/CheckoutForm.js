@@ -40,7 +40,7 @@ export default function CheckoutForm() {
   };
 
   return (
-    <div className="grid grid-cols-1 my-40">
+    <div className="grid grid-cols-1 my-24 p-2 ">
     <div className="flex justify-center justify-items-center">
       <form
         className="flex flex-col "
@@ -49,11 +49,11 @@ export default function CheckoutForm() {
       >
         <PaymentElement id="payment-element" />
         <button
-          className="bg-withe text-xl  p-3 m-5 border-blue-400 border-4 hover:bg-blue-200  rounded-full"
+          className=" text-xl  p-3 m-5 border-white border-4 hover:bg-white text-black  rounded-full"
           disabled={isProcessing || !stripe || !elements}
           id="submit"
         >
-          <span id="button-text font-extrabold font-sans  hover:text-white text-blue-400">
+          <span id="button-text  font-extrabold font-sans  hover:text-white text-blue-400">
             {isProcessing ? "Processing ... " : "Pay now"}
           </span>
         </button>

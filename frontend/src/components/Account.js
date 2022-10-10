@@ -30,17 +30,15 @@ export default function Account() {
   };
 
   return (
-    <div className="Account text-2xl   font-medium  bg-blue-200 border-gray-300 border-solid-2 p-20 mx-80 rounded-lg">
+    <section className="bg-black flex justify-center">
+    <div className="text-2xl my-44  font-serif  bg-white border-gray-300 border-solid-2 p-20 mx-80 rounded-lg">
     <div className="title">
-      <h1>Das bin Ich</h1>
-      <button className="hover:text-blue-600" onClick={handleLogout}>
-        logout
-      </button>
+      <h1 className="text-center text-4xl">Das bin Ich</h1>
     </div>
 
     <form className="update-box" onSubmit={handleUpdate}>
       <div className="input-group">
-        <span>Name</span>
+        <span className="mr-44 ">Name</span>
         <input
           type="text"
           placeholder="Name..."
@@ -52,7 +50,11 @@ export default function Account() {
           {user.error && <div className="error">{user.error}</div>}
           {showSuccess && <div className="success">Update war erfolgreich</div>}
         </form>
+        <button className="hover:text-blue-600" onClick={handleLogout}>
+        logout
+      </button>
       </div>
+      </section>
   
   );
 }

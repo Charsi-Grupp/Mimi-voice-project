@@ -14,8 +14,9 @@ function Team() {
   },[])
   console.log(items);
   return (
-    <div>
-      <section className="text-gray-700 body-font">
+    <div className='bg-black text-white'>
+      <h1 className='text-center text-5xl font-serif pt-14'>Project Developers</h1>
+      <section className="text-gray-500">
       <div className="container px-5 py-24 mx-auto">
         <div className="flex flex-wrap -m-4">
           {items.map(item => (
