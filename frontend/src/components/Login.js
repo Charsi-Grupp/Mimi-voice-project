@@ -20,12 +20,13 @@ export default function Login() {
 
     if (status === 200) {
       const returnurl = params.get("returnurl");
+
       if (returnurl){
+
         navigate(decodeURIComponent(returnurl));
-      }else {
+      } else {
         navigate("/account");
       }
-     
     }
   };
 
@@ -35,7 +36,7 @@ export default function Login() {
       email: email,
       password: password,
       name: name,
-   
+
     });
 
     if (status === 200) {
@@ -47,6 +48,7 @@ export default function Login() {
     return (
      //flex justify-center flex-wrap h-screen mb-20 ml-20 mt-20 h-screen bg-slate-200 text-2xl font-medium
         <div className="bg-black flex justify-center">
+
           <div
             id="form"
             className="block bg-gray-100 my-20 p-20 rounded-x1 shadow-md shadow-slate-300 "
@@ -110,8 +112,9 @@ export default function Login() {
     );
   }
 
+ 
+
   return (
-  
       <div className="bg-black flex justify-center">
         <div
           id="form"
@@ -159,7 +162,8 @@ export default function Login() {
             {user.error && <div className="error">{user.error}</div>}
           </form>
         </div>
+
       </div>
-   
+    </div>
   );
 }

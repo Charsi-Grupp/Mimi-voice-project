@@ -40,6 +40,7 @@ export default function CheckoutForm() {
   };
 
   return (
+
     <div className="grid grid-cols-1 my-24 p-2 ">
     <div className="flex justify-center justify-items-center">
       <form
@@ -60,7 +61,8 @@ export default function CheckoutForm() {
         {/* Show any error or success messages */}
         {message && <div id="payment-message">{message}</div>}
       </form>
+
     </div>
-  </div>
+
   );
 }

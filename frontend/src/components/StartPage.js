@@ -11,9 +11,11 @@ function StartPage() {
   <button className="bg-white w-32 m-12 hover:text-white border-4 rounded-full  hover:bg-blue-200">
     <Link className=" font-sans text-xl hover:text-white text-black" to='/categories/'>Perfumes</Link>
   </button>
+
       </div>
     </div>
-  )
+  );
 }
+
 
 export default StartPage;

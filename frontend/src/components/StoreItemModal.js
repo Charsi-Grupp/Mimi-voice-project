@@ -1,3 +1,4 @@
+
 import {  useState } from "react"; // muss useRef lernen
 import formatCurrency from "../util/formatCurrency";
 import Modal from "react-modal";
@@ -6,7 +7,7 @@ import { useCart } from "../context/CartContext";
 Modal.setAppElement("#root");
 
 export default function StoreItemModal({ item, open, closeModal }) {
-  const [quantity, setQuantity] = useState( item.price.start)
+  const [quantity, setQuantity] = useState(item.price.start);
 
   const { addToCart } = useCart();
  
@@ -16,11 +17,13 @@ export default function StoreItemModal({ item, open, closeModal }) {
     /* const quantity = parseInt(quantityRef.current.value) */
     addToCart(item.id, quantity);
     closeModal();
+
   }
    function onChangePrice(e){
 /* console.log(e.target.value); */
     setQuantity(e.target.value);
    }
+
 
   return (
     <Modal
@@ -144,7 +147,7 @@ export default function StoreItemModal({ item, open, closeModal }) {
                   </a>
                 </span>
               </div>
-             {/*  <p className="leading-relaxed max-w-lg">{item.description}</p> */}
+
               <div className="flex mt-4">
                 {/* <span className="title-font font-medium text-2xl text-gray-900">
                   {formatCurrency(quantity)}
@@ -173,6 +176,7 @@ export default function StoreItemModal({ item, open, closeModal }) {
                   <hr />
                   </div>  
                   </div>  
+
                   <button
                     type="submit"
                     className="flex mt-16 ml-96 text-black bg-white rounded-full border-0 py-2 px-3 focus:outline-none hover:bg-blue-500 rounded-full"
@@ -186,5 +190,5 @@ export default function StoreItemModal({ item, open, closeModal }) {
         </div>
       </section>
     </Modal>
-  )
+  );
 }

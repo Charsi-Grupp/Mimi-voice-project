@@ -25,6 +25,7 @@ function Payment() {
   }, []);
 
   return (
+
     <div className="bg-black flex justify-center text-white ">
      
       {clientSecret && stripePromise && (
@@ -33,6 +34,7 @@ function Payment() {
         </Elements>
       )}
     </div>
+
   );
 }
 

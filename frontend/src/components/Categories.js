@@ -2,16 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 function Categories() {
   return (
+
     //  h-screen  mx-4 bg-gray-100  border-2 border-gray-400 border-solid rounded-sm
     <div className="flex bg-black justify-around ">
     <div className="flex-col mx-80 my-36 ">
-      <div></div>
       <img
         className="border rounded-full w-44 object-cover object-center h-72"
-
         src="https://as1.ftcdn.net/v2/jpg/02/08/75/06/1000_F_208750607_Rno6RKDXL5ZkMNMyhUy1gTtbrB4bYi4q.jpg"
         alt="pic" />
-   
       <button className="border-1 bg-white rounded-full w-32 hover:bg-blue-500 mt-5">
         <Link
           className="  font-extrabold text-xl text-black hover:text-white"
@@ -36,9 +34,11 @@ function Categories() {
           Female
         </Link>
       </button>
+
     </div>
-  </div>
   );
 }
 
 export default Categories;
+
+  

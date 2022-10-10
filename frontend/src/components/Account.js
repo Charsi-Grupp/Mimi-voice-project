@@ -30,6 +30,7 @@ export default function Account() {
   };
 
   return (
+
     <section className="bg-black flex justify-center">
     <div className="text-2xl my-44  font-serif  bg-white border-gray-300 border-solid-2 p-20 mx-80 rounded-lg">
     <div className="title">
@@ -56,5 +57,6 @@ export default function Account() {
       </div>
       </section>
   
+
   );
 }
