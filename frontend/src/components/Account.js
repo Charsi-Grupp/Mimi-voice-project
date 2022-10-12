@@ -11,7 +11,7 @@ export default function Account() {
 
   const handleLogout = async () => {
     await user.logout();
-    navigate("/login");
+    navigate("/mimi");
   };
 
   const handleUpdate = async (e) => {

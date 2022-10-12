@@ -31,11 +31,11 @@ export default function StoreItem({ item }) {
             <h2 className=" title-font text-lg font-medium">
               {item.name}
             </h2>
-            <p className="mt-1">{formatCurrency(item.price.start)}</p>
+            <p className="mt-1">{formatCurrency(item.price.full)}</p>
           </div>
           <button
             onClick={openModal}
-            className="text-black py-2 px-4 text-lg rounded-full hover:bg-blue-500 m-4 bg-white "
+            className="text-black py-2 px-4 text-lg rounded-full hover:bg-red-500 m-4 bg-white "
           >
             Details
           </button>

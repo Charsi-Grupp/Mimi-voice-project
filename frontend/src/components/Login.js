@@ -25,7 +25,7 @@ export default function Login() {
 
         navigate(decodeURIComponent(returnurl));
       } else {
-        navigate("/account");
+        navigate("/categories");
       }
     }
   };
@@ -40,7 +40,7 @@ export default function Login() {
     });
 
     if (status === 200) {
-      navigate("/account");
+      navigate("/mimi");
     }
   };
 

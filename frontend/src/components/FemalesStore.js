@@ -24,11 +24,16 @@ function FemalesStore() {
  
  <section className="bg-black text-white body-font">
       <div className="container px-5 py-24 mx-auto">
+      <h1 className="text-4xl font-serif text-center pb-16">Male Perfume</h1>
         <div className="flex flex-wrap -m-4">
           {items.map(item => (
             <StoreItem key={item.id} item={item} />
           ))}
         </div>
+      {/*   <button className="w-52 " >
+        <img src="https://i.pinimg.com/originals/f6/6a/b5/f66ab5d714c2dde5c042be0c763a76a8.gif" alt="" />
+        </button> */}
+        
       </div>
     </section>
    

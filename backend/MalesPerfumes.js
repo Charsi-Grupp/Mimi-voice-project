@@ -14,6 +14,18 @@ const males =[
 },
 {
   "id": 2,
+  "brand": "BOSS",
+  "name": "EdT",
+  "price": {
+        "start" : 85,
+        "middel" : 120,
+        "full" : 220,
+      },
+  "target" : "male",
+  "image": "https://beauty-content.douglas.de/61dc43253f5322002b9dd82b/c53lku-EDT_HIM_THE_SCENT_WHITE_211220_1.gif"
+  },
+{
+  "id": 3,
   "brand": "VERSACE",
   "name": "Eros Flame",
   "price": {
@@ -25,7 +37,19 @@ const males =[
   "image": "https://media.douglas.de/medias/Gc6Yxd054193-0-global.jpg?context=bWFzdGVyfGltYWdlc3wxMzM5NDh8aW1hZ2UvanBlZ3xoYzcvaDFjLzE2MTMzNDc5ODkwOTc0L0djNll4ZDA1NDE5M18wX2dsb2JhbC5qcGd8M2UzZDkxNTA1YjdlNzcyMWMwMmRkMjhkNDM4OWYxMDliYTdiMTUyMGM1YTg1OWIwOWVmZWVlMmIxNDZmMzVlNw&grid=true&imwidth=550"
 },
 {
-"id": 3,
+  "id": 4,
+  "brand": "BOSS",
+  "name": "Boss Bottled",
+  "price": {
+        "start" : 85,
+        "middel" : 150,
+        "full" : 250,
+      },
+  "target" : "male",
+  "image": "https://beauty-content.douglas.de/61dc43253f5322002b9dd82b/Lf8cRh-737052351100_HB_BB_20_EDT_3D_Bottle_100ml.gif"
+  },
+{
+"id": 5,
   "brand": "VERSACE",
   "name": "Dylan Blue",
   "price": {
@@ -37,7 +61,7 @@ const males =[
   "image": "https://media.douglas.de/medias/1TPdhr932055-0-global.jpg?context=bWFzdGVyfGltYWdlc3w1ODMyN3xpbWFnZS9qcGVnfGhmNi9oMmEvMTYxMzkyNjk1Mzc4MjIvMVRQZGhyOTMyMDU1XzBfZ2xvYmFsLmpwZ3xhOTEyYjA4ODA0MDc1MTFhNTQ1MzNmZjgwMjMyMzYwODY3ZjcxMTQzNmUyYzQxNzUyMGZmYTU1NjI0N2YyYjQ2&grid=true&imwidth=550"
 },
 {
-"id": 4,
+"id": 6,
 "brand": "JEAN PAUL GAULTIER",
 "name": "Le Beau",
 "price": {
@@ -49,7 +73,7 @@ const males =[
 "image": "https://media.douglas.de/medias/q0Xxqz285916-0-global.jpg?context=bWFzdGVyfGltYWdlc3wxNzI5NjN8aW1hZ2UvanBlZ3xoNDAvaDAzLzE3NDY1MTgzMjQwMjIyL3EwWHhxejI4NTkxNl8wX2dsb2JhbC5qcGd8YTY5NGUzMmEzNjZlMWMyNDEwZGMwZWUwNjgxOWJjYzFhZmEzN2EzOGRiMjhkMzJlZGM4ZjlmZjA1MGI5NzU1Yg&grid=true&imwidth=550"
 },
 {
-"id": 5,
+"id": 7,
 "brand": "JEAN PAUL GAULTIER",
 "name": "Le Male Ultra Intense",
 "price": {
@@ -61,7 +85,7 @@ const males =[
 "image": "https://media.douglas.de/medias/ELeBpc614222-0-global.jpg?context=bWFzdGVyfGltYWdlc3w5Njg4MnxpbWFnZS9qcGVnfGhjNS9oNjkvMTc0NjUxODQxNTc3MjYvRUxlQnBjNjE0MjIyXzBfZ2xvYmFsLmpwZ3xiYWI3ZGM0YzU5NmVkNTkzNzI4NGE3MmM5NmQxNWQyMWYzZGNmY2FjYmUxNDA4MDI0YTZiZDNjMzVlOWFlMjUx&grid=true&imwidth=550"
 },
 {
-"id": 6,
+"id": 8,
 "brand": "JEAN PAUL GAULTIER",
 "name": "Le Male",
 "price": {
@@ -73,7 +97,7 @@ const males =[
 "image": "https://media.douglas.de/medias/q7wLeN968696-0-dgl-DE.jpg?context=bWFzdGVyfGltYWdlc3w1MDM4M3xpbWFnZS9qcGVnfGhjYS9oNTUvMTIwOTI2ODcyNTM1MzQvcTd3TGVOOTY4Njk2XzBfZGdsLURFLmpwZ3w0MDQyYzVjMzdiMGFiY2UxODUwN2RlNjAzOWE3MmZlMDRiZmE1ZWJhMzIzYzU3YzY4NDg2NWU1MjBjMmNkNGVm&grid=true&imwidth=550"
 },
 {
-"id": 7,
+"id": 9,
 "brand": "DIOR",
 "name": "SauvageElixir Duft",
 "price": {
@@ -85,7 +109,7 @@ const males =[
 "image":"https://media.douglas.de/medias/Ysit4s242990-0-global.jpg?context=bWFzdGVyfGltYWdlc3w3NjQ3MHxpbWFnZS9qcGVnfGg3ZS9oNjUvMTYxMzQ5OTc5NjY4NzgvWXNpdDRzMjQyOTkwXzBfZ2xvYmFsLmpwZ3xiODQyMTY5NTQwMGM2YzUxN2QzMjM5MTc5NjYzN2VkMTUzOTNkOWU4ODczOTc0ZWI2YjFkZDg5NmM1ODgzZjE1&grid=true&imwidth=550"
 },
 {
-"id": 8,
+"id": 10,
 "brand": "DIOR",
 "name": "Sauvage",
 "price": {
@@ -99,7 +123,7 @@ const males =[
 
 },
 {
-"id": 9,
+"id": 11,
 "brand": "DIOR",
 "name": "Dior HommeIntense",
 "price": {
@@ -111,7 +135,7 @@ const males =[
 "image": "https://media.douglas.de/medias/AToodP629708-0-global.jpg?context=bWFzdGVyfGltYWdlc3w5ODY0NnxpbWFnZS9qcGVnfGg2ZS9oZDUvMTM2MjAyNTcwMzAxNzQvQVRvb2RQNjI5NzA4XzBfZ2xvYmFsLmpwZ3wyMzgyYzRmMDAyZTJiNDhlZTlhNDE2MmVjOTE1ZGQ2ZGE1ZjcxZjY1NWIzODVlMTQyMjQxMDg4ZjAzZDllNmY2&grid=true&imwidth=550"
 },
 {
-"id": 10,
+"id": 12,
 "brand": "DIOR",
 "name": "Dior Homme",
 "price": {
@@ -123,20 +147,9 @@ const males =[
 "image": "https://media.douglas.de/medias/Wxpd2u839738-0-global.jpg?context=bWFzdGVyfGltYWdlc3w2NTYzOXxpbWFnZS9qcGVnfGhjNi9oYzEvMTMzNDU2Mjg4ODA5MjYvV3hwZDJ1ODM5NzM4XzBfZ2xvYmFsLmpwZ3w5MjJlNjg5NzYxMzRiZjgyNmNiMWFlNmI0YmRlMmZhYmMxZWM5N2FjNGNkYzg0NzU4NWM5MzJhM2ZlMjY0YWNm&grid=true&imwidth=550"
 
 },
+
 {
-"id": 11,
-"brand": "BOSS",
-"name": "EdT",
-"price": {
-      "start" : 85,
-      "middel" : 120,
-      "full" : 220,
-    },
-"target" : "male",
-"image": "https://beauty-content.douglas.de/61dc43253f5322002b9dd82b/c53lku-EDT_HIM_THE_SCENT_WHITE_211220_1.gif"
-},
-{
-"id": 12,
+"id": 13,
 "brand": "BOSS",
 "name": "Boss The ScentAbsolute For Him",
 "price": {
@@ -148,7 +161,7 @@ const males =[
 "image": "https://media.douglas.de/medias/SS6TCc266251-0-global.jpg?context=bWFzdGVyfGltYWdlc3w4NDUxMXxpbWFnZS9qcGVnfGhlMC9oODAvMTYxMzUwMjgxMTM0MzgvU1M2VENjMjY2MjUxXzBfZ2xvYmFsLmpwZ3wzN2E5NzI2MzU1MGQ1NjUxZGYxNzQzYjJmNzI0NjZhYjA2ODZiMDM2NzhjNzAwOTJlMTJjYzQ4MjkzYmI0YmRh&grid=true&imwidth=550"
 },
 {
-"id": 13,
+"id": 14,
 "brand": "BOSS",
 "name": "Boss BottledEau de Parfum Spray",
 "price": {
@@ -159,18 +172,7 @@ const males =[
 "target" : "male",
 "image": "https://media.douglas.de/medias/GUAa91707000-0-dgl-DE.jpg?context=bWFzdGVyfGltYWdlc3wxMjk0ODB8aW1hZ2UvanBlZ3xoMDEvaGQ4LzE3NTg5Mzg5MzYxMTgyL0dVQWE5MTcwNzAwMF8wX2RnbC1ERS5qcGd8ZGM0Y2Y4MDU2N2JhZDdkOWZiMTg5NzRiOTA5NmU3Y2UzN2U4ZTAzNTc1MDA1YjhhMjczYzAwOTRkNmEzMDBiYw&grid=true&imwidth=550"
 },
-{
-"id": 14,
-"brand": "BOSS",
-"name": "Boss Bottled",
-"price": {
-      "start" : 85,
-      "middel" : 150,
-      "full" : 250,
-    },
-"target" : "male",
-"image": "https://beauty-content.douglas.de/61dc43253f5322002b9dd82b/Lf8cRh-737052351100_HB_BB_20_EDT_3D_Bottle_100ml.gif"
-},
+
 {
 "id": 15,
 "brand": "ARMANI",

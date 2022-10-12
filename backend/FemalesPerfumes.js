@@ -27,6 +27,18 @@ const female = [
   },
   {
     "id": 27,
+    "brand": "BOSS",
+    "name": "Boss Orange Woman",
+    "price": {
+      "start" : 75,
+      "middel" : 115,
+      "full" : 170
+    },
+    "target" : "female",
+    "image": "https://beauty-content.douglas.de/5e56662d8e9e7500269afadf/0ljsNP-HB_ALV_EDP_20_3D_Bottle_White.gif"
+  },
+  {
+    "id": 28,
     "brand": "LANCOME",
     "name": "IdôleXmas 21",
     "price": {
@@ -38,7 +50,7 @@ const female = [
     "image":"https://media.douglas.de/medias/nXoykt218463-0-global.jpg?context=bWFzdGVyfGltYWdlc3w2ODcyM3xpbWFnZS9qcGVnfGgxZi9oMjAvMTMzNDI1NTYxOTI3OTgvblhveWt0MjE4NDYzXzBfZ2xvYmFsLmpwZ3w2MWQ4MTIyODI5M2ZiZTFjNWRlNDRjOGE5NTA4YTVkNWYzZDlmYzdhZGNkODM5ZTE3ODFjODQ5Y2Y3M2YwMDM4&grid=true&imwidth=5middel"
   },
   {
-    "id": 28,
+    "id": 29,
     "brand": "ARMANI",
     "name": "My WayEau de Parfum Refillable",
     "price": {
@@ -50,7 +62,7 @@ const female = [
     "image":"https://media.douglas.de/medias/BKv4cl684592-0-dgl-DE.jpg?context=bWFzdGVyfGltYWdlc3w4MTM2N3xpbWFnZS9qcGVnfGgzNy9oYTgvMTc1MTAyMTkxMjA2NzAvQkt2NGNsNjg0NTkyXzBfZGdsLURFLmpwZ3w0NWRjMzFhZDNhOTNlNThiNjI0ZmNlMDAwZjY2NDJkZmEwMjk2NzIyZmE4NjFmNWU4NGUzNTU5MWE4ZGUxZWNl&grid=true&imwidth=5middel"
   },
   {
-    "id": 29,
+    "id": 30,
     "brand": "ARMANI",
     "name": "Intense Eau de Parfum Refillable",
     "price": {
@@ -62,7 +74,7 @@ const female = [
     "image":"https://media.douglas.de/medias/c7Ldxb218456-0-dgl-DE.jpg?context=bWFzdGVyfGltYWdlc3wzNjE2MnxpbWFnZS9qcGVnfGhlNS9oMjcvMTExNTc5MjkwMzM3NTgvYzdMZHhiMjE4NDU2XzBfZGdsLURFLmpwZ3xhMzZmN2I4YWE1NzYxZmY1ODM4Nzk2OGVjMzIzNThlMTgwZmZmYmFiMGMwODUxMDRhMThjNjRhNDM4NGM3ZWE1&grid=true&imwidth=5middel"
   },
   {
-    "id": 30,
+    "id": 31,
     "brand": "ARMANI",
     "name": "Sì Eau de Parfum",
     "price": {
@@ -74,7 +86,7 @@ const female = [
     "image":"https://media.douglas.de/medias/RMKx5j753263-0-dgl-DE.jpg?context=bWFzdGVyfGltYWdlc3w1MDA4NHxpbWFnZS9qcGVnfGhlMC9oNjcvMTAwMjY5MjE1MjUyNzgvUk1LeDVqNzUzMjYzXzBfZGdsLURFLmpwZ3wxYTM0NjIxOTFhNDZlMWFjNjQyZDgxYjcyNTBjYjFkMmRhMzIxMDAxMjdkODdlODlhNzgzZmRhZWFiOTdkYjkw&grid=true&imwidth=5middel"
   },
   {
-    "id": 31,
+    "id": 32,
     "brand": "ARMANI",
     "name": "SìPassione",
     "price": {
@@ -87,7 +99,7 @@ const female = [
     
   },
   {
-    "id": 32,
+    "id": 33,
     "brand": "ARMANI",
     "name": "SìIntense",
     "price": {
@@ -99,7 +111,7 @@ const female = [
     "image":"https://media.douglas.de/medias/ZG6DTX898255-0-global.jpg?context=bWFzdGVyfGltYWdlc3w4MDYzMnxpbWFnZS9qcGVnfGhlZC9oNDYvMTMzNDYwMTkyNzg4NzgvWkc2RFRYODk4MjU1XzBfZ2xvYmFsLmpwZ3wxZDExMjRhMGM2ZWJlNWI4ODU5YjdkZjBlNGZhNmE2Y2MyNTNmZDM1ZWNlNDNhOWZjMjY0MmI2NjIwNmNiZDFj&grid=true&imwidth=5middel"
   },
   {
-    "id": 33,
+    "id": 34,
     "brand": "HUGO BOSS",
     "name": "The Scent For Her",
     "price": {
@@ -111,7 +123,7 @@ const female = [
     "image":"https://media.douglas.de/medias/I0ejGE9566middel-0-global.jpg?context=bWFzdGVyfGltYWdlc3w4NDA4N3xpbWFnZS9qcGVnfGhhNi9oNTUvMTMzNDYxOTAzMjc4MzgvSTBlakdFOTU2NjUwXzBfZ2xvYmFsLmpwZ3w3YjY0YzQ1NDJkOTYyYzhmNzNkNmEyMTgxNTU4MDE2ZjJhY2FlZWIzNzQzYTk2ZWM0ZjA5YTQ3YTk5NTc3ZGUx&grid=true&imwidth=5middel"
   },
   {
-    "id": 34,
+    "id": 35,
     "brand": "HUGO BOSS",
     "name": "The Scent For Her Absolute",
     "price": {
@@ -123,7 +135,7 @@ const female = [
     "image": "https://media.douglas.de/medias/pqxwKJ266235-0-global.jpg?context=bWFzdGVyfGltYWdlc3w3MDQ3OHxpbWFnZS9qcGVnfGhhNy9oMmIvMTYxMzUwMjc3MjAyMjIvcHF4d0tKMjY2MjM1XzBfZ2xvYmFsLmpwZ3xlMDEzNzYwZThkZTljNGI3MTQzYzQxYmYxOTM2ODQyNjQwYTE0NjU2Y2RkNTAyMGMyNDYxN2JjMDJiYjcyM2Yx&grid=true&imwidth=5middel"
   },
   {
-    "id": 35,
+    "id": 36,
     "brand": "HUGO BOSS",
     "name": "The Scent For Her Pure Accord",
     "price": {
@@ -134,18 +146,7 @@ const female = [
     "target" : "female",
     "image": "https://media.douglas.de/medias/3tzHnG862920-0-global.jpg?context=bWFzdGVyfGltYWdlc3w2NjE5N3xpbWFnZS9qcGVnfGg3ZC9oZWIvMTYxMzg0NzM2MDMxMDIvM3R6SG5HODYyOTIwXzBfZ2xvYmFsLmpwZ3xmNzhkYTliZDM5ZDk3ZjYxYWEwN2U1YjhmZDU4NWJhOTEwZTc0Yjk1ZjUwMmE4YWYwNDRmZmFhYjgzZjM2NzFm&grid=true&imwidth=5middel"
   },
-  {
-    "id": 36,
-    "brand": "BOSS",
-    "name": "Boss Orange Woman",
-    "price": {
-      "start" : 75,
-      "middel" : 115,
-      "full" : 170
-    },
-    "target" : "female",
-    "image": "https://beauty-content.douglas.de/5e56662d8e9e7500269afadf/0ljsNP-HB_ALV_EDP_20_3D_Bottle_White.gif"
-  },
+  
   {
     "id": 37,
     "brand": "PACO RABANNE",

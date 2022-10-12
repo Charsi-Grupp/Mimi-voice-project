@@ -10,9 +10,9 @@ function Categories() {
         className="border rounded-full w-44 object-cover object-center h-72"
         src="https://as1.ftcdn.net/v2/jpg/02/08/75/06/1000_F_208750607_Rno6RKDXL5ZkMNMyhUy1gTtbrB4bYi4q.jpg"
         alt="pic" />
-      <button className="border-1 bg-white rounded-full w-32 hover:bg-blue-500 mt-5">
+      <button className="border-1 bg-white rounded-full w-32 hover:bg-red-500 mt-5">
         <Link
-          className="  font-extrabold text-xl text-black hover:text-white"
+          className="  font-extrabold font-serif  text-xl text-black hover:text-white"
           to="/males/"
         >
           Male
@@ -28,7 +28,7 @@ function Categories() {
       />
       <button className="bg-white border-1 rounded-full w-32 hover:bg-red-500 mt-5">
         <Link
-          className="  font-extrabold  font-sans text-xl text-black hover:text-white "
+          className="  font-extrabold  font-serif text-xl text-black hover:text-white "
           to="/females/"
         >
           Female

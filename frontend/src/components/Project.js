@@ -19,7 +19,7 @@ function Project() {
         <ul className='text-xl'>
      <li>Javascript E6</li>
      <li>Framework React js</li>
-     <li>Css3 Framework Taiwind</li>
+     <li>Css3 Framework Tailwind</li>
      <li>Fetch axios react</li>
      <li>Stripe Payment</li>
      <li>Alan Ai voice asistent</li>
@@ -30,7 +30,7 @@ function Project() {
         </div>
         <div>
         <h4 className='text-3xl '>Backend</h4>
-        <ul>
+        <ul className='text-xl'>
      <li>Node js</li>
      <li>Framework Express js</li>
      <li>MongoDB</li>

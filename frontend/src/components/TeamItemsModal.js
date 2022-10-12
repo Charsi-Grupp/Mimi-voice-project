@@ -68,8 +68,8 @@ export default function TeamItemModal({ item, open, closeModal }) {
               </ul>
                  }
               </div>
-              <button style={{width: "50px"}}  >
-             <a  href={item.link} className="text-white"><FaGithub/></a></button>
+              <button >
+             <a  href={item.link} className="text-white" ><FaGithub size={30}/>{item.link}</a></button>
               </section>
             </div>
           </div>

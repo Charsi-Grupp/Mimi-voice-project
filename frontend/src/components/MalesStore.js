@@ -24,6 +24,7 @@ function MalesStore() {
   
 <section className="text-white body-font bg-black">
       <div className="container px-5 py-24 mx-auto">
+        <h1 className="text-4xl font-serif text-center pb-16">Male Perfume</h1>
         <div className="flex flex-wrap -m-4">
           {items.map(item => (
             <StoreItem key={item.id} item={item} />

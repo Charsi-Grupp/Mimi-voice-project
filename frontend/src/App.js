@@ -7,7 +7,7 @@ import MalesStore from "./components/MalesStore";
 import FemalesStore from "./components/FemalesStore";
 import Login from "./components/Login";
 import { UserProvider } from "./context/useUser";
-import Account from "./components/Account";
+/* import Account from "./components/Account"; */
 import Layout from "./components/Layout";
 import CheckoutForm from "./components/CheckoutForm";
 import Completion from "./components/Completion";
@@ -32,7 +32,7 @@ function App() {
           <Route path="/males" element={<MalesStore />} />
           <Route path="/females" element={<FemalesStore />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/account" element={<Account />} />
+        {/*   <Route path="/account" element={<Account />} /> */}
           <Route path="/checkout" element={<CheckoutForm />} />
           <Route path="/completion" element={<Completion />} />
           <Route path="/payment" element={<Payment />} />
