@@ -2,6 +2,7 @@ import { useElements, useStripe } from "@stripe/react-stripe-js";
 
 import { PaymentElement } from "@stripe/react-stripe-js";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function CheckoutForm() {
   const stripe = useStripe();
@@ -40,29 +41,31 @@ export default function CheckoutForm() {
   };
 
   return (
-
     <div className="grid grid-cols-1 my-24 p-2 font-serif ">
-    <div className="flex justify-center justify-items-center">
-      <form
-        className="flex flex-col "
-        id="payment-form"
-        onSubmit={handleSubmit}
-      >
-        <PaymentElement id="payment-element" />
-        <button
-          className=" text-xl  p-3 m-5 border-white border-4 hover:bg-white hover:text-black  rounded-full"
-          disabled={isProcessing || !stripe || !elements}
-          id="submit"
+      <div className="flex justify-center justify-items-center">
+        <form
+          className="flex flex-col "
+          id="payment-form"
+          onSubmit={handleSubmit}
         >
-          <span id="button-text  font-extrabold font-serif  hover:text-white text-blue-400">
-            {isProcessing ? "Processing ... " : "Pay now"}
-          </span>
-        </button>
-        {/* Show any error or success messages */}
-        {message && <div id="payment-message">{message}</div>}
-      </form>
+          <PaymentElement id="payment-element" />
+          <motion.button
+            className=" text-xl  p-3 m-5 border-white border-4 hover:bg-white hover:text-black  rounded-full"
+            disabled={isProcessing || !stripe || !elements}
+            id="submit"
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 0px 8px rgb(255,255,255)",
+            }}
+          >
+            <span id="button-text  font-extrabold font-serif  hover:text-white text-blue-400">
+              {isProcessing ? "Processing ... " : "Pay now"}
+            </span>
+          </motion.button>
+          {/* Show any error or success messages */}
+          {message && <div id="payment-message">{message}</div>}
+        </form>
       </div>
     </div>
-
   );
 }

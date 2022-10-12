@@ -4,6 +4,7 @@ import formatCurrency from "../util/formatCurrency";
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import useUser from "../context/useUser";
+import { motion } from "framer-motion";
 
 export default function Cart() {
   const user = useUser();
@@ -44,28 +45,33 @@ export default function Cart() {
             <span className="font-bold">{formatCurrency(totalCents)}</span>
           </div>
 
-          <button
-
-           onClick={(e)=> {
-            if (user.data){
-              checkout();
-              navigate("/payment");
-            }else {
-              checkout();
-              navigate("/login?returnurl="+encodeURIComponent("/payment"));
-            }
-            
-          }}
-          className="text-white py-2 px-4 text-lg rounded-full hover:bg-red-500 m-4 bg-black "
-
+          <motion.button
+            onClick={(e) => {
+              if (user.data) {
+                checkout();
+                navigate("/payment");
+              } else {
+                checkout();
+                navigate("/login?returnurl=" + encodeURIComponent("/payment"));
+              }
+            }}
+            className="text-white py-2 px-4 text-lg rounded-full hover:bg-red-500 m-4 bg-black "
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0px 0px 8px rgb(255,255,255)",
+            }}
           >
             Check out
-          </button>
+          </motion.button>
         </div>
       </div>
-      <button
+      <motion.button
         onClick={() => setShowCartItems((prev) => !prev)}
         className="fixed top-0 right-0 mr-4 mt-4 w-12 bg-black p-2 rounded-full text-white hover:bg-red-500"
+        whileHover={{
+          scale: 1.1,
+          boxShadow: "0px 0px 8px rgb(255,255,255)",
+        }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -83,7 +89,7 @@ export default function Cart() {
         <div className="bg-black rounded-full text-xs absolute w-6 h-6 flex justify-center items-center right-0 bottom-0 transform translate-x-2 translate-y-2">
           {cart.length}
         </div>
-      </button>
+      </motion.button>
     </section>
   );
 }

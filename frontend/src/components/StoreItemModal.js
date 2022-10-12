@@ -1,8 +1,8 @@
-
-import {  useState } from "react"; // muss useRef lernen
+import { useState } from "react"; // muss useRef lernen
 import formatCurrency from "../util/formatCurrency";
 import Modal from "react-modal";
 import { useCart } from "../context/CartContext";
+import { motion } from "framer-motion";
 
 Modal.setAppElement("#root");
 
@@ -10,20 +10,18 @@ export default function StoreItemModal({ item, open, closeModal }) {
   const [quantity, setQuantity] = useState(item.price.start);
 
   const { addToCart } = useCart();
- 
+
   function handleSubmit(e) {
     e.preventDefault();
 
     /* const quantity = parseInt(quantityRef.current.value) */
     addToCart(item.id, quantity);
     closeModal();
-
   }
-   function onChangePrice(e){
-/* console.log(e.target.value); */
+  function onChangePrice(e) {
+    /* console.log(e.target.value); */
     setQuantity(e.target.value);
-   }
-
+  }
 
   return (
     <Modal
@@ -50,12 +48,12 @@ export default function StoreItemModal({ item, open, closeModal }) {
           <div className="mx-auto flex items-center">
             <img
               alt="ecommerce"
-             style={{width: '50%'}}
+              style={{ width: "50%" }}
               /* className="w-20px object-cover object-center rounded" */
               src={item.image}
             />
             <div className="pl-8 py-2">
-              <h2 className="text-sm title-font text-white tracking-widest">
+              <h2 className="text-base title-font text-red-400 tracking-widest">
                 {item.brand}
               </h2>
               <h1 className="text-white text-3xl title-font font-medium mb-1">
@@ -64,8 +62,8 @@ export default function StoreItemModal({ item, open, closeModal }) {
               <div className="flex mb-4">
                 <span className="flex items-center">
                   <svg
-                    fill="orange"
-                    stroke="orange"
+                    fill="yellow"
+                    stroke="yellow"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -75,8 +73,8 @@ export default function StoreItemModal({ item, open, closeModal }) {
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                   </svg>
                   <svg
-                    fill="orange"
-                    stroke="orange"
+                    fill="yellow"
+                    stroke="yellow"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -86,8 +84,8 @@ export default function StoreItemModal({ item, open, closeModal }) {
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                   </svg>
                   <svg
-                    fill="orange"
-                    stroke="orange"
+                    fill="yellow"
+                    stroke="yellow"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -97,8 +95,8 @@ export default function StoreItemModal({ item, open, closeModal }) {
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
                   </svg>
                   <svg
-                    fill="orange"
-                    stroke="orange"
+                    fill="yellow"
+                    stroke="yellow"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -109,7 +107,7 @@ export default function StoreItemModal({ item, open, closeModal }) {
                   </svg>
                   <svg
                     fill="none"
-                    stroke="orange"
+                    stroke="yellow"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth="2"
@@ -121,7 +119,10 @@ export default function StoreItemModal({ item, open, closeModal }) {
                   <span className="text-gray-600 ml-3">4 Reviews</span>
                 </span>
                 <span className="flex ml-3 pl-3 py-2 border-l-2 border-gray-200">
-                  <a href="https://de-de.facebook.com/" className="text-gray-500">
+                  <a
+                    href="https://de-de.facebook.com/"
+                    className="text-gray-500"
+                  >
                     <svg
                       fill="blue"
                       strokeLinecap="round"
@@ -133,7 +134,10 @@ export default function StoreItemModal({ item, open, closeModal }) {
                       <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
                     </svg>
                   </a>
-                  <a href="https://twitter.com/?lang=de" className="ml-2 text-gray-500">
+                  <a
+                    href="https://twitter.com/?lang=de"
+                    className="ml-2 text-gray-500"
+                  >
                     <svg
                       fill="blue"
                       strokeLinecap="round"
@@ -151,38 +155,65 @@ export default function StoreItemModal({ item, open, closeModal }) {
               <div className="flex mt-4">
                 {/* <span className="title-font font-medium text-2xl text-gray-900">
                   {formatCurrency(quantity)}
-                </span>  */} 
-                <form
-                  onSubmit={handleSubmit}
-                  className=""
-                >    <div class="flex-col text-lg">
-                {/* {" "} */}
-                  <div className="m-6">
-                  <input  type="radio" name="price" onChange={onChangePrice} value={item.price.start}  id="30" />
-                  <span className="mr-72 ml-4">30ml</span>
-                  <label className="" htmlFor="">{formatCurrency(item.price.start)}</label>
-                  <hr />
-                 </div>
-                 <div className="m-6">
-                  <input type="radio" name="price" onChange={onChangePrice} value={item.price.middel}  id="50"  />
-                  <span className="mr-72 ml-4">50ml</span>
-                  <label htmlFor=""> {formatCurrency(item.price.middel)} </label>
-                  <hr />
+                </span>  */}
+                <form onSubmit={handleSubmit} className="">
+                  {" "}
+                  <div class="flex-col text-lg">
+                    {/* {" "} */}
+                    <div className="m-6">
+                      <input
+                        type="radio"
+                        name="price"
+                        onChange={onChangePrice}
+                        value={item.price.start}
+                        id="30"
+                      />
+                      <span className="mr-72 ml-4">30ml</span>
+                      <label className="" htmlFor="">
+                        {formatCurrency(item.price.start)}
+                      </label>
+                      <hr />
+                    </div>
+                    <div className="m-6">
+                      <input
+                        type="radio"
+                        name="price"
+                        onChange={onChangePrice}
+                        value={item.price.middel}
+                        id="50"
+                      />
+                      <span className="mr-72 ml-4">50ml</span>
+                      <label htmlFor="">
+                        {" "}
+                        {formatCurrency(item.price.middel)}{" "}
+                      </label>
+                      <hr />
+                    </div>
+                    <div className="m-7">
+                      <input
+                        type="radio"
+                        name="price"
+                        onChange={onChangePrice}
+                        value={item.price.full}
+                        id="100"
+                      />
+                      <span className="mr-72 ml-4">100ml</span>
+                      <label htmlFor="">
+                        {formatCurrency(item.price.full)}{" "}
+                      </label>
+                      <hr />
+                    </div>
                   </div>
-                  <div className="m-7">
-                  <input type="radio" name="price" onChange={onChangePrice} value={item.price.full} id="100"  />
-                  <span className="mr-72 ml-4">100ml</span>
-                  <label htmlFor="">{formatCurrency(item.price.full)} </label>
-                  <hr />
-                  </div>  
-                  </div>  
-
-                  <button
+                  <motion.button
                     type="submit"
                     className="flex mt-16 ml-96 text-black bg-white rounded-full border-0 py-2 px-3 focus:outline-none hover:bg-red-500 rounded-full"
+                    whileHover={{
+                      scale: 1.3,
+                      boxShadow: "0px 0px 8px rgb(255,255,255)",
+                    }}
                   >
                     Add To Cart
-                  </button>
+                  </motion.button>
                 </form>
               </div>
             </div>
