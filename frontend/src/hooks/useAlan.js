@@ -12,6 +12,7 @@ const COMMANDS = {
 };
 
 export default function useAlan() {
+  
   const [alanInstance, setAlanInstance] = useState();
   const {
     setShowCartItems,
