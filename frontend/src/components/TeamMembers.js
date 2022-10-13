@@ -18,9 +18,9 @@ export default function TeamsMembers({ item }) {
       <div className="lg:w-1/3 w-1/2 p-3">
         <div className="block relative h-24 rounded overflow-hidden">
           <img
-            style={{ width: "50%" }}
+          style={{width: "30%"}}
             alt="e-commerce"
-            className=" object-cover object-center w-full h-full block"
+            className=" object-cover border-2 rounded-lg object-center w-full h-full block"
             src={item.image}
           />
         </div>
@@ -39,7 +39,7 @@ export default function TeamsMembers({ item }) {
               boxShadow: "0px 0px 8px rgb(255,255,255)",
             }}
             onClick={openModal}
-            className="border-1 rounded-full bg-white w-44 h-8 m-4 text-black font-bold"
+            className="border-1 rounded-full bg-white w-44 h-8 m-4 text-black "
           >
             Info
           </motion.button>

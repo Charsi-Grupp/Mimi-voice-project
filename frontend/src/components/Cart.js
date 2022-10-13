@@ -44,7 +44,6 @@ export default function Cart() {
             <span className="font-bold text-lg uppercase">Total</span>
             <span className="font-bold">{formatCurrency(totalCents)}</span>
           </div>
-
           <motion.button
             onClick={(e) => {
               if (user.data) {
@@ -60,6 +59,7 @@ export default function Cart() {
               scale: 1.1,
               boxShadow: "0px 0px 8px rgb(255,255,255)",
             }}
+
           >
             Check out
           </motion.button>

@@ -16,10 +16,12 @@ export default function StoreItem({ item }) {
 
   return (
     <>
-      <div className="lg:w-1/4 w-1/2 p-3 text-white">
-        <div className="block relative h-24 rounded overflow-hidden">
+      <div className="lg:w-1/4 w-1/2 p-3 ">
+        <section className="bg-white text-black rounded p-6 h-80">
+        <div className="block relative h-24  overflow-hidden">
           <img
             alt="e-commerce"
+
             className=" object-cover object-center w-70% h-full block"
             src={item.image}
           />
@@ -43,7 +45,10 @@ export default function StoreItem({ item }) {
             </motion.button>
           </div>
         </div>
+
       </div>
+        </section>
+        </div>
       <StoreItemModal item={item} open={open} closeModal={closeModal} />
     </>
   );

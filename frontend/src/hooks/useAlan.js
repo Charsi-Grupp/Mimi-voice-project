@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import alanBtn from "@alan-ai/alan-sdk-web";
 import { useCart } from "../context/CartContext";
-
+/* import useUser from "../context/useUser"; */
 
 const COMMANDS = {
   OPEN_CART: "open-cart",
@@ -11,7 +11,9 @@ const COMMANDS = {
   PURCHASE_ITEMS: "purchase-items",
 };
 
+
 export default function useAlan() {
+  /* const user = useUser() */
   const [alanInstance, setAlanInstance] = useState();
   const {
     setShowCartItems,

@@ -3,6 +3,8 @@
 import Modal from "react-modal";
 /* import { useCart } from "../context/CartContext"; */
 import { FaGithub} from 'react-icons/fa';
+import {ImLinkedin} from 'react-icons/im';
+
 Modal.setAppElement("#root");
 
 export default function TeamItemModal({ item, open, closeModal }) {
@@ -28,7 +30,7 @@ export default function TeamItemModal({ item, open, closeModal }) {
       }}
     >
       <section className="bg-black text-white font-serif body-font overflow-hidden">
-        <div className="container px-4 py-4 mx-auto">
+        <div className="container flex-col px-4 py-4 mx-auto">
           <div className="mx-auto flex items-center pt-9">
             <img
               alt="ecommerce"
@@ -68,11 +70,23 @@ export default function TeamItemModal({ item, open, closeModal }) {
               </ul>
                  }
               </div>
-              <button >
-             <a  href={item.link} className="text-white" ><FaGithub size={30}/>{item.link}</a></button>
               </section>
+             
             </div>
+            <div>
+              <h2 className="text-center text-2xl">About me:</h2>
+            <p>
+              {item.introducing}
+            </p>
+            <div className="flex justify-around p-9">
+            {item.link.linkedin&&
+              <button ><a  href={item.link.linkedin} className="text-white" ><ImLinkedin size={30}/></a></button>}
+              <button ><a  href={item.link.github} className="text-white" ><FaGithub size={30}/></a></button>
+            </div>
+           
           </div>
+          </div>
+          
         </div>
       </section>
     </Modal>
