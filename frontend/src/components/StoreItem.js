@@ -36,7 +36,7 @@ export default function StoreItem({ item }) {
               className="text-black py-2 px-4 text-lg rounded-full hover:bg-red-500 m-4 bg-white "
               whileHover={{
                 scale: 1.3,
-                boxShadow: "0px 0px 8px rgb(255,255,255)",
+                boxShadow: "0px 0px 8px rgb(254,255,255)",
               }}
             >
               Details
