@@ -19,7 +19,7 @@ export default function TeamsMembers({ item }) {
           <img
           style={{width: "30%"}}
             alt="e-commerce"
-            className=" object-cover border-2 rounded-full object-center w-full h-full block"
+            className=" object-cover border-2 rounded-lg object-center w-full h-full block"
             src={item.image}
           />
         </div>

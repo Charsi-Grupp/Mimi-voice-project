@@ -45,7 +45,6 @@ export default function Cart() {
           </div>
 
           <button
-
            onClick={(e)=> {
             if (user.data){
               checkout();
