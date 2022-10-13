@@ -205,6 +205,7 @@ export default function StoreItemModal({ item, open, closeModal }) {
                     </div>
                   </div>
                   <motion.button
+                  id="addToCartLink"
                     type="submit"
                     className="flex mt-16 ml-96 text-black bg-white rounded-full border-0 py-2 px-3 focus:outline-none hover:bg-red-500 rounded-full"
                     whileHover={{

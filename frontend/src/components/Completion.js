@@ -29,11 +29,12 @@ function Completion() {
           className="border-1 rounded-full bg-white w-36 h-8 m-4"
           whileHover={{ scale: 1.3, boxShadow: "0px 0px 8px rgb(255,255,255)" }}
         >
-          <Link className="text-black font-bold" to="/categories/">
+          <Link id="keepShopping" className="text-black font-bold" to="/categories/">
             Keep shopping
           </Link>
         </motion.button>
         <motion.button
+        id="wayToTeam"
           className="border-1 rounded-full bg-white w-36 h-8 m-4 text-black font-bold"
           onClick={handleLogout}
           whileHover={{ scale: 1.3, boxShadow: "0px 0px 8px rgb(255,255,255)" }}

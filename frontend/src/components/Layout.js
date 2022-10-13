@@ -27,7 +27,8 @@ export default function Layout(props) {
             <h1 className="text-white">Mimi</h1>
           </button>
         </div>
-        <motion.button
+        <motion.button 
+        id="loginLogout"
           className="text-white border-1 rounded-full bg-black w-32 h-8 m-8 "
           whileHover={{ scale: 1.3, boxShadow: "0px 0px 8px rgb(2,2,2)" }}
           onClick={(e) => {

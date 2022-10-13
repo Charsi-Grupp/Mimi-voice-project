@@ -31,7 +31,7 @@ function Project() {
             delay: "1",
           }}
         >
-          <Link to="/mimi/">
+          <Link id="mimiStartPage" to="/mimi/">
             <img
               className="mx-96 mt-12 mt-16 p-11"
               src="https://img.freepik.com/premium-vector/voice-assistant-concept-page-personal-mobile-voice-recognition-abstract-sound-waves-microphone-icon-neon-music-equalizer-smart-home-ui-element-speaking-waveform-gradient-flow_87408-196.jpg"

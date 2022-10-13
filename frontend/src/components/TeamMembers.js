@@ -38,6 +38,7 @@ export default function TeamsMembers({ item }) {
               scale: 1.3,
               boxShadow: "0px 0px 8px rgb(255,255,255)",
             }}
+            id="infoTeam"
             onClick={openModal}
             className="border-1 rounded-full bg-white w-44 h-8 m-4 text-black "
           >

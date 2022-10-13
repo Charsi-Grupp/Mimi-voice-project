@@ -21,6 +21,7 @@ function Categories() {
           whileHover={{ scale: 1.3, boxShadow: "0px 0px 8px rgb(255,255,255)" }}
         >
           <Link
+          id="maleLink"
             className="  font-extrabold font-serif  text-xl text-black hover:text-white"
             to="/males/"
           >
@@ -45,6 +46,7 @@ function Categories() {
           whileHover={{ scale: 1.3, boxShadow: "0px 0px 8px rgb(255,255,255)" }}
         >
           <Link
+             id="femaleLink"
             className="  font-extrabold  font-serif text-xl text-black hover:text-white "
             to="/females/"
           >

@@ -9,7 +9,7 @@ function Footer() {
         className="border-1 rounded-full bg-black w-48 h-8 m-4"
         whileHover={{ scale: 1.3, boxShadow: "0px 0px 8px rgb(5,5,5)" }}
       >
-        <Link to="/" className="text-white">
+        <Link id="projectLink" to="/" className="text-white">
           Project Introduction
         </Link>
       </motion.button>
@@ -17,7 +17,7 @@ function Footer() {
         className="border-1 rounded-full bg-black w-48 h-8 m-4"
         whileHover={{ scale: 1.3, boxShadow: "0px 0px 8px rgb(5,5,5)" }}
       >
-        <Link className="text-white" to="/team/">
+        <Link id="teamLink" className="text-white" to="/team/">
           Developers Team
         </Link>
       </motion.button>

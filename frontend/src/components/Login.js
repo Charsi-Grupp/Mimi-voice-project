@@ -25,7 +25,7 @@ export default function Login() {
       if (returnurl) {
         navigate(decodeURIComponent(returnurl));
       } else {
-        navigate("/categories");
+        navigate("/mimi");
       }
     }
   };
@@ -61,6 +61,7 @@ export default function Login() {
             <div className="input-group  w-1/2 mr-1">
               <div className="label text-sm">Email</div>
               <input
+              id="emailRegister"
                 type="email"
                 className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"
                 placeholder="Email"
@@ -72,6 +73,7 @@ export default function Login() {
             <div className="input-group  w-1/2 mr-1">
               <div className="label text-sm">Password</div>
               <input
+              id="passwordRegister"
                 type="password"
                 className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"
                 value={password}
@@ -82,6 +84,7 @@ export default function Login() {
             <div className="input-group w-1/2 mr-1">
               <div className="label text-sm">Name</div>
               <input
+              id="nameRegister"
                 style={{ backgroundColor: "#E8F0FE" }}
                 type="text"
                 className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2   outline-blue-600 shadow-sm"
@@ -91,18 +94,20 @@ export default function Login() {
               />
             </div>
             <div
+            id="showLoginLink"
               className="toggle-register"
               onClick={() => setShowRegister(false)}
             >
-              <p className="text-xs my-2">Ich habe bereits einen Account</p>
+              <p className="text-xs my-2">I have an Account</p>
             </div>
 
             <motion.button
+            id="sendRegisterLink"
               type="submit "
               className="bg-black w-full h-10 cursor-pointer text-white rounded-md hover:bg-red-700 rounded-full hover:text-hover:outline-offset"
               whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px rgb(2,2,2)" }}
             >
-              {user.isFetching ? "fetching..." : "Abschicken"}
+              {user.isFetching ? "fetching..." : "Send"}
             </motion.button>
           </form>
         </motion.div>
@@ -126,6 +131,7 @@ export default function Login() {
           <div className="input-group  w-1/2 mr-1">
             <div className="label">Email</div>
             <input
+            id="emailLogin"
               type="email"
               className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"
               placeholder="Email"
@@ -137,6 +143,7 @@ export default function Login() {
           <div className="input-group  w-1/2 mr-1">
             <div className="label">Password</div>
             <input
+            id="passwordLogin"
               type="password"
               className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"
               value={password}
@@ -145,18 +152,20 @@ export default function Login() {
           </div>
 
           <div
+          id="showRegisterLink"
             className="toggle-register"
             onClick={() => setShowRegister(true)}
           >
-            <p className="text-sm my-2">Ich habe noch keinen Account</p>
+            <p className="text-sm my-2">I don`t have an Account</p>
           </div>
 
           <motion.button
+          id="sendLogin"
             type="submit"
             className="bg-black w-full h-10 cursor-pointer text-white rounded-md hover:bg-red-700 rounded-full hover:text-hover:outline-offset"
             whileHover={{ scale: 1.1, boxShadow: "0px 0px 8px rgb(2,2,2)" }}
           >
-            {user.isFetching ? "fetching..." : "Abschicken"}
+            {user.isFetching ? "fetching..." : "Send"}
           </motion.button>
 
           {user.error && <div className="error">{user.error}</div>}

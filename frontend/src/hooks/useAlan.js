@@ -9,11 +9,13 @@ const COMMANDS = {
   ADD_ITEM: "add-item",
   REMOVE_ITEM: "remove-item",
   PURCHASE_ITEMS: "purchase-items",
+  OPEN_MIMI_START_PAGE: "open-mimi-start-page",
 };
 
 
 export default function useAlan() {
   /* const user = useUser() */
+
   const [alanInstance, setAlanInstance] = useState();
   const {
     setShowCartItems,
@@ -25,6 +27,11 @@ export default function useAlan() {
     perfumeItems,
   } = useCart();
 
+/*   const navigate = useNavigate();
+  const handleLogout = async () => {
+    await user.logout();
+    navigate("/team");
+  }; */
   const openCart = useCallback(() => {
     if (isCartEmpty) {
       alanInstance.playText("You have no items in your cart");
@@ -42,6 +49,17 @@ export default function useAlan() {
       setShowCartItems(false);
     }
   }, [alanInstance, isCartEmpty, setShowCartItems]);
+
+const openMimiStartPage = useCallback( () => {
+  const element = document.getElementById("mimiStartPage");
+  if(element){
+    element.click()
+
+  }else {
+    alanInstance.playText("Not working")
+    
+  }
+},[alanInstance])
 
   const addItem = useCallback(
     ({ detail: { name, quantity } }) => {
@@ -90,15 +108,16 @@ export default function useAlan() {
     window.addEventListener(COMMANDS.ADD_ITEM, addItem);
     window.addEventListener(COMMANDS.REMOVE_ITEM, removeItem);
     window.addEventListener(COMMANDS.PURCHASE_ITEMS, purchaseItems);
-
+window.addEventListener(COMMANDS.OPEN_MIMI_START_PAGE,openMimiStartPage)
     return () => {
       window.removeEventListener(COMMANDS.OPEN_CART, openCart);
       window.removeEventListener(COMMANDS.CLOSE_CART, closeCart);
       window.removeEventListener(COMMANDS.ADD_ITEM, addItem);
       window.removeEventListener(COMMANDS.REMOVE_ITEM, removeItem);
       window.removeEventListener(COMMANDS.PURCHASE_ITEMS, purchaseItems);
+      window.removeEventListener(COMMANDS.OPEN_MIMI_START_PAGE, openMimiStartPage);
     };
-  }, [openCart, closeCart, addItem, removeItem, purchaseItems]);
+  }, [openCart, closeCart, addItem, removeItem, purchaseItems, openMimiStartPage]);
 
   useEffect(() => {
     if (alanInstance != null) return;
