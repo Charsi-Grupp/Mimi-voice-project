@@ -1,6 +1,7 @@
 import useUser from "../context/useUser";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Layout(props) {
   const user = useUser();
@@ -22,10 +23,18 @@ export default function Layout(props) {
               alt=""
             />
           </div>
-          <button className="border-1 rounded-full bg-black w-32 h-8 m-8 ">
-            {" "}
+          {/* <button className="border-1 rounded-full bg-black w-32 h-8 m-8 ">
+          
             <h1 className="text-white">Mimi</h1>
-          </button>
+          </button> */}
+           <motion.button
+       className="border-1 rounded-full bg-black w-32 h-8 m-8 "
+        whileHover={{ scale: 1.3, boxShadow: "0px 0px 8px rgb(5,5,5)" }}
+      >
+        <Link id="backTostartLink" className="text-white" to="/mimi/">
+          Mimi
+        </Link>
+      </motion.button>
         </div>
         <motion.button 
         id="loginLogout"

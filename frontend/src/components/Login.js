@@ -135,7 +135,7 @@ export default function Login() {
               type="email"
               className="h-8 w-full rounded-md border border-slate-300 text-sm p1-2 bg-transparent  outline-blue-600 shadow-sm"
               placeholder="Email"
-              value={email}
+            /*   value={email} */
               onChange={(e) => setEmail(e.target.value)}
             />
           </div>
@@ -152,11 +152,10 @@ export default function Login() {
           </div>
 
           <div
-          id="showRegisterLink"
             className="toggle-register"
             onClick={() => setShowRegister(true)}
           >
-            <p className="text-sm my-2">I don`t have an Account</p>
+            <p  id="showRegisterLink" className="text-sm my-2">I don`t have an Account</p>
           </div>
 
           <motion.button

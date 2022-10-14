@@ -20,8 +20,8 @@ function StartPage() {
           transition={{ delay: "0.8" }}
         >
           <img
-            className="mx-36 mt-12 border rounded-3xl"
-            style={{ width: "55%" }}
+            className="mx-12 mt-12 border rounded-3xl"
+            style={{ width: 500 }}
             src="https://i.pinimg.com/originals/63/71/b9/6371b96dfb59740b017ffd3518060c66.jpg"
             alt=""
           />
