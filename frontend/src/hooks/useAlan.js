@@ -20,8 +20,17 @@ const COMMANDS = {
   OPEN_MALE_LINK: "open-male-link",
   OPEN_FEMALE_LINK : "open-female-link",
   OPEN_DETAILS_BUTTON : "open-details-button",
+  ADD_START_PRICE : "add-start-price",
+  ADD_MIDDEL_PRICE : "add-middel-price",
+  ADD_FULL_PRICE : "add-full-price",
+  OPEN_CART_LINK : "open-cart-link",
+  GO_TO_PAY : "go-to-pay",
+  SENT_REGISTER_BUTTON : "sent-register-button",
+  SENT_LOGIN_BUTTON : "sent-login-button",
+  SENT_PAYMENT_BUTTON : "sent-pay-button",
+  KEEP_SHOPPING_LINK : "keep-shopping-link",
+  GO_TO_TEAM : "go-to-team",
 };
-
 
 export default function useAlan() {
   /* const user = useUser() */
@@ -37,23 +46,23 @@ export default function useAlan() {
     perfumeItems,
   } = useCart();
   
-  const openCart = useCallback(() => {
-    if (isCartEmpty) {
+const openCart = useCallback(() => {
+  if (isCartEmpty) {
       alanInstance.playText("You have no items in your cart");
     } else {
       alanInstance.playText("Opening cart");
       setShowCartItems(true);
     }
-  }, [alanInstance, isCartEmpty, setShowCartItems]);
+}, [alanInstance, isCartEmpty, setShowCartItems]);
 
-  const closeCart = useCallback(() => {
+const closeCart = useCallback(() => {
     if (isCartEmpty) {
       alanInstance.playText("You have no items in your cart");
     } else {
       alanInstance.playText("Closing cart");
       setShowCartItems(false);
     }
-  }, [alanInstance, isCartEmpty, setShowCartItems]);
+}, [alanInstance, isCartEmpty, setShowCartItems]);
 
 const openMimiStartPage = useCallback( () => {
   const element = document.getElementById("mimiStartPage");
@@ -97,6 +106,51 @@ const openLoginLogout = useCallback(() =>{
   }
 },[alanInstance])
 
+const sentRegisterButton = useCallback(() =>{
+  const element = document.getElementById("sendRegisterLink");
+  if(element){
+    element.click()
+  }else{
+    alanInstance.playText("Not working")
+  }
+},[alanInstance])
+
+const sentPaymentButton = useCallback(() =>{
+  const element = document.getElementById("submit");
+  if(element){
+    element.click()
+  }else{
+    alanInstance.playText("Not working")
+  }
+},[alanInstance])
+
+const goToTeam = useCallback(() =>{
+  const element = document.getElementById("wayToTeam");
+  if(element){
+    element.click()
+  }else{
+    alanInstance.playText("Not working")
+  }
+},[alanInstance])
+
+const keepShoppingLink = useCallback(() =>{
+  const element = document.getElementById("keepShopping");
+  if(element){
+    element.click()
+  }else{
+    alanInstance.playText("Not working")
+  }
+},[alanInstance])
+
+const sentLoginButton = useCallback(() =>{
+  const element = document.getElementById("sendLogin");
+  if(element){
+    element.click()
+  }else{
+    alanInstance.playText("Not working")
+  }
+},[alanInstance])
+
 const goToPerfumes = useCallback(() =>{
   const element = document.getElementById("perfumesLink");
   if(element){
@@ -105,7 +159,6 @@ const goToPerfumes = useCallback(() =>{
     alanInstance.playText("Not working")
   }
 },[alanInstance])
-
 
 const openStartLink = useCallback(() =>{
   const element = document.getElementById("backTostartLink");
@@ -125,6 +178,14 @@ const openProjectLink = useCallback(() =>{
   }
 },[alanInstance])
 
+const goToPay = useCallback(() =>{
+  const element = document.getElementById("toPayButton");
+  if(element){
+    element.click()
+  }else{
+    alanInstance.playText("Not working")
+  }
+},[alanInstance])
 
 const openMaleLink = useCallback(() =>{
   const element = document.getElementById("maleLink");
@@ -153,20 +214,85 @@ const openTeamLink = useCallback(() =>{
   }
 },[alanInstance])
 
-const openDetailsButton = useCallback((name) =>{
-  console.log("open: " , name );
-  const item = perfumeItems.find(
-    (i) => i.name.toLowerCase() === name.toLowerCase()
-   
-  );
-  const element = document.getElementById(`detailsLink${item.id}`);
-  console.log(element);
-  if(item){
+const addStartPrice = useCallback(() =>{
+  const element = document.getElementById("30");
+  if(element){
     element.click()
   }else{
     alanInstance.playText("Not working")
   }
-},[alanInstance,  perfumeItems])
+},[alanInstance]);
+const addMiddelPrice = useCallback(() =>{
+  const element = document.getElementById("50");
+  if(element){
+    element.click()
+  }else{
+    alanInstance.playText("Not working")
+  }
+},[alanInstance]);
+
+const addFullPrice = useCallback(() =>{
+  const element = document.getElementById("100");
+  if(element){
+    element.click()
+  }else{
+    alanInstance.playText("Not working")
+  }
+},[alanInstance]);
+
+const openCartLink = useCallback(() =>{
+  const element = document.getElementById("addToCartLink");
+  if(element){
+    element.click()
+  }else{
+    alanInstance.playText("Not working")
+  }
+},[alanInstance])
+
+
+/* const openDetailsButton = useCallback(() =>{
+  const element = document.getElementById("det");
+  if(element){
+    element.click()
+  }else{
+    alanInstance.playText("Not working")
+  }
+},[alanInstance]) */
+
+
+ const openDetailsButton = useCallback( ({ detail: name, ...rest  }) => {
+  console.log(name);
+  const item = perfumeItems.find(
+    (i) => i.name.toLowerCase() === name.toLowerCase()
+  );
+  console.log(item);
+  const element = document.getElementById(item.id);
+  console.log(element);
+ 
+    if (item == null) {
+      alanInstance.playText(`I cannot find the ${name} item`);
+    } else {
+      element.click()
+    }
+  },
+  [alanInstance, perfumeItems]) 
+
+/* const [isOpen, setIsOpen] = useState()
+  const openItemButton = useCallback( ({ details: name  }) => {
+    const item = perfumeItems.find(
+      (i) => i.name === name
+    );
+    console.log(item);
+    const element = document.getElementById("det");
+    console.log(element);
+   
+      if (item == null) {
+        alanInstance.playText(`I cannot find the ${name} item`);
+      } else {
+        element.click()
+      }
+    },
+    [alanInstance, perfumeItems]) */
 
   const addItem = useCallback(
     ({ detail: { name, quantity } }) => {
@@ -226,6 +352,17 @@ const openDetailsButton = useCallback((name) =>{
     window.addEventListener(COMMANDS.OPEN_MALE_LINK, openMaleLink);
     window.addEventListener(COMMANDS.OPEN_FEMALE_LINK, openFemaleLink);
     window.addEventListener(COMMANDS.OPEN_DETAILS_BUTTON, openDetailsButton);
+    window.addEventListener(COMMANDS.ADD_START_PRICE, addStartPrice);
+    window.addEventListener(COMMANDS.ADD_MIDDEL_PRICE, addMiddelPrice);
+    window.addEventListener(COMMANDS.ADD_FULL_PRICE, addFullPrice);
+    window.addEventListener(COMMANDS.OPEN_CART_LINK, openCartLink);
+    window.addEventListener(COMMANDS.GO_TO_PAY, goToPay);
+    window.addEventListener(COMMANDS.SENT_REGISTER_BUTTON, sentRegisterButton);
+    window.addEventListener(COMMANDS.SENT_LOGIN_BUTTON, sentLoginButton);
+    window.addEventListener(COMMANDS.SENT_PAYMENT_BUTTON, sentPaymentButton);
+    window.addEventListener(COMMANDS.KEEP_SHOPPING_LINK, keepShoppingLink);
+    window.addEventListener(COMMANDS.GO_TO_TEAM, goToTeam);
+
     return () => {
       window.removeEventListener(COMMANDS.OPEN_CART, openCart);
       window.removeEventListener(COMMANDS.CLOSE_CART, closeCart);
@@ -243,9 +380,18 @@ const openDetailsButton = useCallback((name) =>{
       window.removeEventListener(COMMANDS.OPEN_MALE_LINK, openMaleLink);
       window.removeEventListener(COMMANDS.OPEN_FEMALE_LINK, openFemaleLink);
       window.removeEventListener(COMMANDS.OPEN_DETAILS_BUTTON, openDetailsButton);
-    
+      window.removeEventListener(COMMANDS.ADD_START_PRICE, addStartPrice);
+      window.removeEventListener(COMMANDS.ADD_MIDDEL_PRICE, addMiddelPrice);
+      window.removeEventListener(COMMANDS.ADD_MIDDEL_PRICE, addMiddelPrice);
+      window.removeEventListener(COMMANDS.OPEN_CART_LINK, openCartLink);
+      window.addEventListener(COMMANDS.GO_TO_PAY, goToPay);
+      window.removeEventListener(COMMANDS.SENT_REGISTER_BUTTON, sentRegisterButton);
+      window.addEventListener(COMMANDS.SENT_LOGIN_BUTTON, sentLoginButton);
+      window.removeEventListener(COMMANDS.SENT_PAYMENT_BUTTON, sentPaymentButton);
+      window.removeEventListener(COMMANDS.KEEP_SHOPPING_LINK, keepShoppingLink);
+      window.removeEventListener(COMMANDS.GO_TO_TEAM, goToTeam);
     };
-  }, [openCart, closeCart, addItem, removeItem, purchaseItems, openMimiStartPage, openLoginLogout, openRegister ,writeEmailLogin, openProjectLink, openTeamLink, openStartLink, goToPerfumes , openMaleLink, openFemaleLink, openDetailsButton ]);
+  }, [openCart, closeCart, addItem, removeItem, purchaseItems, openMimiStartPage, openLoginLogout, openRegister ,writeEmailLogin, openProjectLink, openTeamLink, openStartLink, goToPerfumes , openMaleLink, openFemaleLink, openDetailsButton, addStartPrice, addMiddelPrice, addFullPrice, openCartLink, goToPay, sentRegisterButton, sentLoginButton, sentPaymentButton, keepShoppingLink, goToTeam]);
 
   useEffect(() => {
     if (alanInstance != null) return;

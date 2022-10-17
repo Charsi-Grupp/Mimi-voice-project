@@ -4,6 +4,8 @@ import Modal from "react-modal";
 /* import { useCart } from "../context/CartContext"; */
 import { FaGithub} from 'react-icons/fa';
 import {ImLinkedin} from 'react-icons/im';
+/* import { motion } from "framer-motion";
+import {Link} from "react-router-dom"; */
 
 Modal.setAppElement("#root");
 
@@ -83,7 +85,15 @@ export default function TeamItemModal({ item, open, closeModal }) {
               <button ><a  href={item.link.linkedin} className="text-white" ><ImLinkedin size={30}/></a></button>}
               <button ><a  href={item.link.github} className="text-white" ><FaGithub size={30}/></a></button>
             </div>
-           
+      {/*       <motion.button
+        id="backTo"
+          className="border-1 rounded-full bg-white w-36 h-8 m-4 text-black font-bold"
+          whileHover={{ scale: 1.3, boxShadow: "0px 0px 8px rgb(255,255,255)" }}
+        >
+           <Link id="keepShopping" className="text-black font-bold" to="//">
+            Back
+          </Link>
+        </motion.button> */}
           </div>
           </div>
           

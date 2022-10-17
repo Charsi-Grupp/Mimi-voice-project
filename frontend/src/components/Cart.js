@@ -45,6 +45,7 @@ export default function Cart() {
             <span className="font-bold">{formatCurrency(totalCents)}</span>
           </div>
           <motion.button
+          id="toPayButton"
             onClick={(e) => {
               if (user.data) {
                 checkout();
