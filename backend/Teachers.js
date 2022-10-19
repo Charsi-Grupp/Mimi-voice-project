@@ -10,5 +10,6 @@ const teachers = [
   {
     "name": "Hendrik Belitz",
     "image": "https://profile-images.xing.com/images/d9a10902264ade098257405747ec5f60-3/hendrik-belitz.1024x1024.jpg"
+
   }
 ];

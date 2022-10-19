@@ -36,6 +36,7 @@ export default function StoreItem({ item }) {
           </div>
           <motion.button
           id="det"        //{item.id}
+
               onClick={openModal}
               className="text-white py-2 px-4 text-lg rounded-full hover:bg-red-500 m-4 bg-black "
               whileHover={{
