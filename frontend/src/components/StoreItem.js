@@ -35,7 +35,7 @@ export default function StoreItem({ item }) {
             <p className="mt-1">{formatCurrency(item.price.full)}</p>
           </div>
           <motion.button
-          id= {item.id}
+          id="det"        //{item.id}
               onClick={openModal}
               className="text-white py-2 px-4 text-lg rounded-full hover:bg-red-500 m-4 bg-black "
               whileHover={{

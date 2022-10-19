@@ -250,17 +250,17 @@ const openCartLink = useCallback(() =>{
 },[alanInstance])
 
 
-/* const openDetailsButton = useCallback(() =>{
+const openDetailsButton = useCallback(() =>{
   const element = document.getElementById("det");
   if(element){
     element.click()
   }else{
     alanInstance.playText("Not working")
   }
-},[alanInstance]) */
+},[alanInstance]) 
 
 
- const openDetailsButton = useCallback( ({ detail: name, ...rest  }) => {
+ /* const openDetailsButton = useCallback( ({ detail: name, ...rest  }) => {
   console.log(name);
   const item = perfumeItems.find(
     (i) => i.name.toLowerCase() === name.toLowerCase()
@@ -275,7 +275,7 @@ const openCartLink = useCallback(() =>{
       element.click()
     }
   },
-  [alanInstance, perfumeItems]) 
+  [alanInstance, perfumeItems])  */
 
 /* const [isOpen, setIsOpen] = useState()
   const openItemButton = useCallback( ({ details: name  }) => {

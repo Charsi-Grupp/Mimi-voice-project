@@ -6,6 +6,7 @@ import Modal from "react-modal";
 import { motion } from "framer-motion";
 Modal.setAppElement("#root");
 
+
 function Completion() {
   const user = userUser();
   /* const [name, setName] = useState(user.data.name); */
@@ -14,7 +15,7 @@ function Completion() {
   const handleLogout = async () => {
     await user.logout();
     navigate("/team");
-  };
+  }
   return (
     <section className="bg-black text-white flex justify-center font-serif">
       <motion.div
