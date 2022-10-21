@@ -16,6 +16,8 @@ import Team from "./components/Team";
 import TeamMembers from "./components/TeamMembers";
 import Footer from "./components/Footer";
 import Project from "./components/Project";
+import Thank from "./components/Thank";
+import Teachers from "./components/Teachers";
 
 function App() {
   useAlan();
@@ -38,9 +40,10 @@ function App() {
           <Route path="/payment" element={<Payment />} />
           <Route path="/team" element={<Team/>} />
           <Route path="/teamMembers" element={<TeamMembers/>} />
-        
+          <Route path="/thank" element={<Thank/>} />
+          <Route path="/teachers" element={<Teachers/>} />
         </Routes>
-     {/*    <Project /> */}
+   
         <Cart />
         <Footer/>
       </Router>

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { fetchTeam } from "../util/apiCalls";
 import TeamMembers from "./TeamMembers";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 function Team() {
   const [items, setItems] = useState([]);
@@ -37,7 +38,13 @@ function Team() {
             ))}
           </div>
         </div>
+        <footer className="flex justify-center pb-24 " >
+         <Link id="thank" to="/thank">
+            <img width="500px" src="https://thumbs.dreamstime.com/b/merci-bedankt-franse-het-woordwolk-van-de-liefdehart-verschillende-talen-202205396.jpg" alt="" />
+            </Link>
+      </footer>
       </section>
+     
     </div>
   );
 }

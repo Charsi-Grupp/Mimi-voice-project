@@ -30,6 +30,8 @@ const COMMANDS = {
   SENT_PAYMENT_BUTTON : "sent-pay-button",
   KEEP_SHOPPING_LINK : "keep-shopping-link",
   GO_TO_TEAM : "go-to-team",
+  OPEN_INFO_TEAMS : "open-info-teams",
+  OPEN_THANKS : "open-thanks",
 };
 
 export default function useAlan() {
@@ -249,7 +251,14 @@ const openCartLink = useCallback(() =>{
   }
 },[alanInstance])
 
-
+const openInfoTeams =useCallback(() => {
+  const element = document.getElementById("infoTeam");
+  if(element){
+    element.click()
+  }else{
+    alanInstance.playText("Not working")
+  }
+},[alanInstance])
 
 const openDetailsButton = useCallback(() =>{
 
@@ -262,6 +271,14 @@ const openDetailsButton = useCallback(() =>{
 
 },[alanInstance]) 
 
+const openThanks = useCallback(() =>{
+  const element = document.getElementById("thank");
+  if(element){
+    element.click()
+  }else{
+    alanInstance.playText("Not working")
+  }
+},[alanInstance])
 
  /* const openDetailsButton = useCallback( ({ detail: name, ...rest  }) => {
 
@@ -367,6 +384,8 @@ const openDetailsButton = useCallback(() =>{
     window.addEventListener(COMMANDS.SENT_PAYMENT_BUTTON, sentPaymentButton);
     window.addEventListener(COMMANDS.KEEP_SHOPPING_LINK, keepShoppingLink);
     window.addEventListener(COMMANDS.GO_TO_TEAM, goToTeam);
+    window.addEventListener(COMMANDS.OPEN_INFO_TEAMS, openInfoTeams);
+    window.addEventListener(COMMANDS.OPEN_THANKS, openThanks);
 
     return () => {
       window.removeEventListener(COMMANDS.OPEN_CART, openCart);
@@ -395,8 +414,10 @@ const openDetailsButton = useCallback(() =>{
       window.removeEventListener(COMMANDS.SENT_PAYMENT_BUTTON, sentPaymentButton);
       window.removeEventListener(COMMANDS.KEEP_SHOPPING_LINK, keepShoppingLink);
       window.removeEventListener(COMMANDS.GO_TO_TEAM, goToTeam);
+      window.removeEventListener(COMMANDS.OPEN_INFO_TEAMS, openInfoTeams);
+      window.removeEventListener(COMMANDS.OPEN_THANKS, openThanks);
     };
-  }, [openCart, closeCart, addItem, removeItem, purchaseItems, openMimiStartPage, openLoginLogout, openRegister ,writeEmailLogin, openProjectLink, openTeamLink, openStartLink, goToPerfumes , openMaleLink, openFemaleLink, openDetailsButton, addStartPrice, addMiddelPrice, addFullPrice, openCartLink, goToPay, sentRegisterButton, sentLoginButton, sentPaymentButton, keepShoppingLink, goToTeam]);
+  }, [openCart, closeCart, addItem, removeItem, purchaseItems, openMimiStartPage, openLoginLogout, openRegister ,writeEmailLogin, openProjectLink, openTeamLink, openStartLink, goToPerfumes , openMaleLink, openFemaleLink, openDetailsButton, addStartPrice, addMiddelPrice, addFullPrice, openCartLink, goToPay, sentRegisterButton, sentLoginButton, sentPaymentButton, keepShoppingLink, goToTeam, openInfoTeams, openThanks]);
 
   useEffect(() => {
     if (alanInstance != null) return;
@@ -404,7 +425,7 @@ const openDetailsButton = useCallback(() =>{
     setAlanInstance(
       alanBtn({
         top: "0.6rem",
-        left: "50%",
+        left: "48%",
         key: process.env.REACT_APP_ALAN_KEY,
         onCommand: ({ command, payload }) => {
           window.dispatchEvent(new CustomEvent(command, { detail: payload }));

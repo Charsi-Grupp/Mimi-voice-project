@@ -16,9 +16,9 @@ export default function TeamsMembers({ item }) {
   return (
     <>
       <div className="lg:w-1/3 w-1/2 p-3">
-        <div className="block relative h-24 rounded overflow-hidden">
+        <div className="block relative h-44 w-44 rounded overflow-hidden">
           <img
-          style={{width: "30%"}}
+          style={{width: "200px"}}
             alt="e-commerce"
             className=" object-cover border-2 rounded-lg object-center w-full h-full block"
             src={item.image}

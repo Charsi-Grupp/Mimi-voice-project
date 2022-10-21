@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function Project() {
   return (
     <div className="bg-black text-white font-serif">
-      <div className="flex-col justify-center p-4 text-center">
+      <div className="flex-col justify-center p-2 text-center">
         <motion.h1
           className="text-5xl m-8 m-10 mt-16"
           initial={{ x: "-100vw" }}
@@ -33,7 +33,8 @@ function Project() {
         >
           <Link id="mimiStartPage" to="/mimi/">
             <img
-              className="mx-96 mt-12 mt-16 p-11"
+            style={{width:"500px"}}
+              className="mx-96 mt-8 mt-2 p-2 mb-16 pb-6"
               src="https://img.freepik.com/premium-vector/voice-assistant-concept-page-personal-mobile-voice-recognition-abstract-sound-waves-microphone-icon-neon-music-equalizer-smart-home-ui-element-speaking-waveform-gradient-flow_87408-196.jpg"
               alt=""
             />
@@ -69,7 +70,7 @@ function Project() {
                 <li>Mongoose</li>
                 <li>Cros</li>
                 <li>Crypto-bcrypt</li>
-                <li>express-validator</li>
+                <li>Express-validator</li>
                 <li>Nodemon</li>
                 <li>Stripe</li>
               </ul>

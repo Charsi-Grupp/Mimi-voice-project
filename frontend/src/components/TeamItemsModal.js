@@ -50,7 +50,7 @@ export default function TeamItemModal({ item, open, closeModal }) {
               <h3 className="text-3xl py-5">Skills</h3>
               <section className="flex mb-4">
                 <div className="mr-9">
-                <span className="text-2xl" >Technologie :</span>
+                <span className="text-2xl" >Technologie </span>
                 {item.technologie&&
              <ul>
               <li>{item.technologie[0]}</li>
@@ -61,7 +61,7 @@ export default function TeamItemModal({ item, open, closeModal }) {
              </ul>}
                 </div>
               <div>
-              <span className="text-2xl ">Frameworks :</span>
+              <span className="text-2xl ">Frameworks </span>
               {item.framework&&
               <ul>
                 <li>{item.framework[0]}</li>

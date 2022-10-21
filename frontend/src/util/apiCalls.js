@@ -18,4 +18,6 @@ export function fetchFeMales (req, res) {
   export function fetchTeam (req, res) {
     return axios.get('/team');
     }
-   
+    export function fetchTeachers (req, res) {
+      return axios.get('/teachers');
+      }
