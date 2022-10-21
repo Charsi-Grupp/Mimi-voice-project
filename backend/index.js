@@ -29,6 +29,7 @@ app.use("/perfumes", require("./src/routes/perfumes"));
 app.use("/user", require("./src/routes/user"));
 app.use("/stripe", require("./src/routes/stripe"));
 app.use("/team", require("./src/routes/team"));
+app.use("/teachers", require("./src/routes/teachers"));
  app.post('/drop-database', async (req, res) => {
   await mongoose.connection.db.dropDatabase()
   res.status(200).send('OK')
